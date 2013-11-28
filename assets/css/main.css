@@ -63,6 +63,10 @@ a:visited { color: #a0a; }
   line-height: 1.5em;
 }
 
+.site img {
+  max-width: 100%;
+}
+
 .header a {
   font-weight: bold;
   text-decoration: none;
