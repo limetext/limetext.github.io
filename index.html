@@ -1,31 +1,49 @@
 ---
 layout: default
-title: Limetext
+title: Lime Text
 ---
 
-<section class="main">
-    <h3>What is Lime?</h3>
-    <p>
-        I love the <a href="http://www.sublimetext.com">Sublime Text</a> editor. <a href="https://github.com/quarnster/SublimeClang">I have</a> <a href="https://github.com/quarnster/SublimeJava">created</a> <a href="https://github.com/quarnster/CompleteSharp">several</a> <a href="https://github.com/quarnster/SublimeGDB">plugins</a> <a href="https://github.com/quarnster/ADBView">to make</a> it even better. One thing that scares me though is that it is not open sourced and the <a href="http://www.sublimetext.com/nightly">pace of nightly releases</a> have recently been anything but nightly, even now that version 3 is out in Beta.
-    </p>
-    <p>
-        There was a period of about 6 months after the Sublime Text 2 "stable" version was released where pretty much nothing at all was communicated to the users about what to expect in the future, nor was there much support offered in the forums. People including myself were wondering if the product was dead and I personally wondered what would happen to all the bugs, crashes and annoyances that still existed in ST2. This lack of communication is a dealbreaker to me and I decided that I will not spend any more money on that product because of it.
-    </p>
-    <p>
-        As none of the other text editors I've tried come close to the love I had for Sublime Text, I decided I had to create my own.
-    </p>
-    <p>
-        <a href="http://i.imgur.com/VIpmjau.png" target="_blank" title="Click for larger image">
-            <img src="http://i.imgur.com/q69yZW2.jpg" alt="Screenshot of Lime using termbox frontend" style="height: 527px" />
-        </a>
-    </p>
-</section>
+<div class="splash">
+    <div class="pure-g-r">
+        <div class="pure-u-1-5">
+            <div class="l-box splash-image">
+                <img src="assets/img/limet.png"></img>
+            </div>
+        </div>
 
-<section id="home">
-    <h3>Update</h3>
-    <ul class="posts">
-        {% for post in site.posts  limit:7 %}
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-</section>
+        <div class="pure-u-4-5">
+            <div class="l-box splash-text">
+                <h1 class="splash-head">
+                    Lime Text
+                </h1>
+                <h3 class="content-subhead">open source text editor</h3>
+
+                <h2 class="splash-subhead">
+                    We are making Lime Text. The open source successor to Sublime Text.
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pure-g-r conntent-ribbon">
+    <div class="pure-u-1-3">
+        <div class="l-box">
+            <h2 class="content-subhead">Tales from the Lime</h2>
+            <ul class="unstyled">
+                {% for post in site.posts limit:7 %}
+                    <li>
+                        <span>{{ post.date | date_to_string }}</span> <i class="fa fa-arrow-circle-o-right"></i> <a href="{{ post.url }}">{{ post.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-2-3">
+        <div class="l-box">
+            <a href="http://i.imgur.com/VIpmjau.png" target="_blank" title="Click for larger image">
+                <img src="http://i.imgur.com/q69yZW2.jpg" alt="Screenshot of Lime using termbox frontend" />
+            </a>
+        </div>
+    </div>
+</div>
