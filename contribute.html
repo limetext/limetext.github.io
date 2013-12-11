@@ -1,0 +1,74 @@
+---
+layout: default
+title: Contribute to the Lime
+---
+
+<div class="pure-g-r content-ribbon">
+    <div class="pure-u-2-3">
+        <div class="l-box">
+                <h2 class="content-subhead">Made with <i class="fa fa-heart"></i>, go and You!</h2>
+                <p>We, as in: You are making the open source successor to Sublime Text!</p>
+                <p>Lime Text is an open source project.</p>
+                <p>
+                    The Backend is written in go. If you are fluent in go, go ahead fork the projekt. This project is at an eary stage. It is a chance and a chalange. We hope you are up to it.
+                </p>
+                <p>
+                    The Frontend is written in <span class="yellow">what ever you want</span>. At the moment there are termbox,qt and HTML/javascript implementations. Dart and skia are in discussion. If one of those Languages is your strong suit feel free to push the task on. 
+                </p>
+                <p>
+                    The Website is generated via jekyll on gihub-pages. We use purecss and jQuery. Fluent english writers are importend es well, since
+                    wikis and docuemtations have to be written, the story of the Lime has to be told. 
+                </p>
+        </div>
+    </div>
+
+    <div class="pure-u-1-3">
+        <div class="l-box">
+            <h3 class="content-subhead">Contributors</h3>
+            <h4 class="yellow">to the Lime Backend</h4>
+            <ul id="commiter-backend" class="unstyled">
+            </ul>
+            <h4 class="yellow">to the Lime Website</h4>
+            <ul id="commiter-website" class="unstyled">
+            </ul>
+            <ul id="commiter-frontend" class="unstyled">
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function httpGet(theUrl)
+    {
+        var xmlHttp = null;
+
+        xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false );
+        xmlHttp.send( null );
+        return xmlHttp.responseText;
+    }
+
+    function addToList(theList, theContributors) {
+        var list = document.getElementById(theList);
+
+        $.each(theContributors, function(key, value){
+            list.innerHTML = list.innerHTML + "<a href=" + value.html_url + "><li><img class='rounded' src=" + value.avatar_url +" ></img></li></a>";
+        });
+    }
+
+    var contributorsBackend = $.parseJSON(httpGet("https://api.github.com/repos/limetext/lime/contributors"));
+    var contributorsWebsite = $.parseJSON(httpGet("https://api.github.com/repos/limetext/limetext.github.io/contributors"))
+    //var contributorsFrontend* = $.parseJSON(httpGet("https://api.github.com/repos/limetext/:frontend/contributors"))
+
+
+    addToList("commiter-backend", contributorsBackend);
+    addToList("commiter-website", contributorsWebsite);
+    //addToList("commiter-frontend", contributorsWebsite);
+    
+    // menu highlighting
+    var d = document.getElementsByClassName("pure-menu-selected");
+    d[0].className = "";
+    var d = document.getElementsByClassName("contribute");
+    d[0].className = d[0].className + " pure-menu-selected";
+
+</script>
