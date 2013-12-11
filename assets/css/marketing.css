@@ -1,0 +1,101 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    line-height: 1.7em;
+}
+
+.l-box {
+    padding: 1em;
+}
+
+.header {
+    margin: 0 0;
+}
+
+.header .pure-menu {
+    padding: 0.5em;
+}
+
+.pure-menu a{color: white}
+.header .pure-menu li a:hover,
+.header .pure-menu li a:focus {
+    background: none;
+    border: none;
+    color: #E16521
+}
+
+.pure-menu.pure-menu-open.pure-menu-fixed {background-color: #0B0A0A;}
+.pure-menu .pure-menu-heading {color: #4D6537}
+.pure-menu .pure-menu-selected a {color: #DBB800}
+
+.splash {
+    margin: 2em auto 0;
+    padding: 3em 0.5em;
+    background: #eee;
+}
+.splash .splash-head {
+    font-size: 300%;
+    margin: 0em 0;
+    line-height: 1.2em;
+    color: #E16521;
+}
+.splash .splash-subhead {
+    color: #999;
+    font-weight: 300;
+    line-height: 1.4em;
+}
+.splash .primary-button {
+    font-size: 150%;
+}
+
+.content .content-subhead {
+    color: #DBB800;
+    padding-bottom: 0.3em;
+    text-transform: uppercase;
+    margin: 0;
+    border-bottom: 2px solid #eee;
+    display: inline-block;
+}
+
+.content .content-ribbon {
+    margin: 3em;
+}
+
+.ribbon {
+    background: #eee;
+    text-align: center;
+    padding: 2em;
+    color: #999;
+}
+.ribbon h2 {
+    display: inline;
+    font-weight: normal;
+}
+
+.footer {
+    background: #111;
+    color: #666;
+    text-align: center;
+    padding: 1em;
+    font-size: 80%;
+}
+
+/** pure buttons */
+
+.pure-button-success,.pure-button-error,.pure-button-warning,.pure-button-secondary {color: white;border-radius: 4px;text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2)}
+.pure-button-success {background: rgb(28, 184, 65); /* this is a green */}
+.pure-button-error {background: rgb(202, 60, 60); /* this is a maroon */}
+.pure-button-warning {background: #E16521; /* this is an orange */}
+.pure-button-secondary {background: rgb(66, 184, 221); /* this is a light blue */}
+
+/** list */
+.unstyled li{list-style: none} 
+
+/** links */
+a{color:#935E29;text-decoration:none;}
+a:hover{color: #E16521}

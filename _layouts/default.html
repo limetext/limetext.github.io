@@ -1,45 +1,68 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
+
 <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="lime text, an open source text editor">
+
     <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width">
-
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="/assets/css/syntax.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/main.css">
-
+    
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/fav.ico">
+
+    <!-- syntax highlighting css -->
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+
+    <!-- pure css -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+
+    <!-- pure theme css -->
+    <link rel="stylesheet" href="/assets/css/marketing.css">
+
+    <!-- font awesome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <section class="site">
+
+<div class="content">
+    <div class="header">
+        <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
+            <a class="pure-menu-heading" href="/">Lime Text - open source text editor</a>
+
+            <ul>
+                <li class="home pure-menu-selected"><a href="/">home</a></li>
+                <li class="all"><a href="/allposts.html">all updates</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
         
-        <header class="main">
-            <hgroup class="header">
-                <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-                <a class="extra" href="/">home</a>
-                <a class="extra" href="/allposts.html">all updates</a>
-            </hgroup>
-        </header>
+        {{ content }}
 
-        <section class="main">
+        <div class="l-box ribbon">
+            <h2></h2>
+            <a href="#" class="pure-button pure-button-warning"><i class="fa fa-github"></i> Get Lime on GitHub</a>
+        </div>
+    </div>
 
-            {{ content }}
+    <div class="footer">
+        Please help! This is not the final Version of the Website. Nor are these the final colors. Feel free to contribute.
+    </div>
+</div>
 
-        <section>
+<!-- global scripts here -->
+<script type="text/javascript">
+</script>
 
-        <footer class="footer">
-            <p class="well">
-                View it on <a href="https://github.com/limetext/lime">github</a>
-            </p>
-            <h4 class="well">Please help! This is not the final Version of the Website. Nor are these the final colors. Feel free to contribute.</h4>
-        </footer>
-</section>
+<!-- github ribbon -->
+<a href="https://github.com/limetext/lime"><img style="position: fixed; top: 0; right: 0; border: 0; z-index:100" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
 
 </body>
 </html>

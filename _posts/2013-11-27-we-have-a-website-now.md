@@ -2,7 +2,7 @@
 layout: post
 title:  "We have a website now!"
 date:   2013-11-27 21:23:01
-categories: news from the lime
+categories: news
 ---
 
 We want to bring you a open source successor to Sublime Text. 
