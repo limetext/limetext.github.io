@@ -91,6 +91,7 @@ body {
 .pure-button-success {background: rgb(28, 184, 65); /* this is a green */}
 .pure-button-error {background: rgb(202, 60, 60); /* this is a maroon */}
 .pure-button-warning {background: #E16521; /* this is an orange */}
+a.pure-button-warning:hover {background: #FA7E3A;}
 .pure-button-secondary {background: rgb(66, 184, 221); /* this is a light blue */}
 
 /** list */
@@ -99,3 +100,15 @@ body {
 /** links */
 a{color:#935E29;text-decoration:none;}
 a:hover{color: #E16521}
+
+/** rounded */
+.rounded {
+            width: 40px;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+        }
+/** colors */
+.yellow{
+    color: #DBB800;
+}
