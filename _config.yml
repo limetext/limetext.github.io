@@ -1,3 +1,4 @@
 name: Lime - open source text editor
 markdown: redcarpet
 pygments: true
+exclude: ['Rakefile']
