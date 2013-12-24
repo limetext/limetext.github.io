@@ -95,7 +95,9 @@ a.pure-button-warning:hover {background: #FA7E3A;}
 .pure-button-secondary {background: rgb(66, 184, 221); /* this is a light blue */}
 
 /** list */
-.unstyled li{list-style: none} 
+.unstyled { margin: 0;
+padding:0;
+list-style: none}
 
 /** links */
 a{color:#935E29;text-decoration:none;}
