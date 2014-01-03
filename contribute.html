@@ -55,7 +55,7 @@ title: Contribute to the Lime
         var list = document.getElementById(theList);
 
         $.each(theContributors, function(key, value){
-            list.innerHTML = list.innerHTML + "<a href=" + value.html_url + "><li><img class='rounded' src=" + value.avatar_url +" ></img></li></a>";
+            list.innerHTML = list.innerHTML + "<a class='floatme' href=" + value.html_url + "><li><img class='rounded' src=" + value.avatar_url +" ></img></li></a>";
         });
     }
 
