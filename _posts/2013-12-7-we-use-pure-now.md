@@ -10,6 +10,6 @@ You can see the [Project here][pure project].
 And the [Licence for Pure here][pure licence].
 
 
-[pure]: http://http://purecss.io/
+[pure]: http://purecss.io/
 [pure project]: https://github.com/yui/pure/
 [pure licence]: http://yuilibrary.com/license/
