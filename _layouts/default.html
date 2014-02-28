@@ -1,73 +1,72 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="lime text, an open source text editor">
-
+    <meta name="description" content="{{ site.name }}">
+    <meta name="author" content="The Lime Text Project Developers">
+    <meta name="keywords" content="lime, lime text, lime text editor,
+              open source, open source editor, code editor, programming">
     <title>{{ page.title }}</title>
-    
-    <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/fav.ico">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  </head>
+  <body>
+    <div class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+          <span class="sr-only"> … </span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Lime Text</a>
+      </div>
 
-    <!-- syntax highlighting css -->
-    <link rel="stylesheet" href="/assets/css/syntax.css">
-
-    <!-- pure css -->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
-
-    <!-- pure theme css -->
-    <link rel="stylesheet" href="/assets/css/marketing.css">
-
-    <!-- media queries -->
-    <link rel="stylesheet" href="/assets/css/media-queries.css">
-
-    <!-- font awesome -->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-<div class="content">
-    <div class="header">
-        <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
-            <a class="pure-menu-heading" href="/">Lime Text <span class="hide">- open source text editor</a>
-
-            <ul>
-                <li class="home pure-menu-selected"><a href="/">home</a></li>
-                <li class="all"><a href="/allposts.html">all updates</a></li>
-                <li class="contribute"><a href="/contribute.html">contribute</a></li>
-                <li class="wiki"><a href="https://github.com/limetext/lime/wiki">wiki</a></li>
-            </ul>
-        </div>
+      <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        {% for link in site.nav %}
+          {% assign active = nil %}
+          {% if page.url == link.url or page.layout == link.layout %}
+            {% assign active = 'class="active"' %}
+          {% endif %}
+          <li {{ active }}><a href="{{ link.url }}">{{ link.text }}</a></li>
+        {% endfor %}
+      </ul>
+      </nav>
     </div>
+    </div>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
 
-    <div class="content">
-        
-        {{ content }}
-
-        <div class="pure-g-r ribbon">
-                <div class="pure-u-1-3">
+    <!-- TODO: make post paging and drop direct links to the posts
+     and `page.ispost`-->
+    {{ content }}
+    {% assign extended_footer = true %}
+    {% if page.path contains 'index.html' or page.ispost == true %}
+      {% assign extended_footer = false %}
+    {% endif %}
+    {% if extended_footer %}
+      <div class="banner">
+      <div class="container">
+        <div class="row">
+                <div class="col-md-4">
                     <h3>Get Involved</h3>
                     <ul class="unstyled">
-                        <li><a href="http://webchat.freenode.net/?channels=limetext">chat on IRC at freenode/#limetext</a></li>
-                        <li><a href="https://github.com/limetext/lime/issues?direction=desc&state=open">current issues on github</a></li>
-                     </ul> 
+                        <li><a href="http://webchat.freenode.net/?channels=limetext">Chat on <span class="monospace">#limetext</span></a></li>
+                        <li><a href="https://github.com/limetext/lime/issues?direction=desc&state=open">Current Issues</a></li>
+                     </ul>
                 </div>
-                <div class="pure-u-1-3">
+                <div class="col-md-4">
                     <h3>Quick Links</h3>
                     <ul class="unstyled">
-                        <li><a href="https://github.com/limetext/lime">source code</a></li>
-                        <li><a href="https://github.com/limetext/lime/issues/new">file an issue</a></li>
-                        <li><a href="https://github.com/limetext/lime/wiki">wiki</a></li>
+                        <li><a href="https://github.com/limetext/lime">Source Code</a></li>
+                        <li><a href="https://github.com/limetext/lime/issues/new">File an issue</a></li>
+                        <li><a href="https://github.com/limetext/lime/wiki">Wiki</a></li>
                     </ul>
                 </div>
-                <div class="pure-u-1-3">
+                <div class="col-md-4">
                     <h3>Tales from the Lime</h3>
                     <ul class="unstyled">
                     {% for post in site.posts limit:4 %}
@@ -79,21 +78,19 @@
                 </div>
         </div>
         <div class="l-box ribbon">
-            <a href="https://github.com/limetext/lime" class="pure-button pure-button-warning"><i class="fa fa-github"></i> Get Lime on GitHub</a>
+            <a href="https://github.com/limetext/lime" class="btn btn-warning"><i class="fa fa-github"></i> Get Lime on GitHub</a>
         </div>
-    </div>
+      </div>
+      </div>
+    {% endif %}
 
-    <div class="footer">
-        Please help! This is not the final Version of the Website. Nor are these the final colors. Feel free to contribute.
-    </div>
-</div>
+    {% if page.ispost == nil %}
+    <footer>
+      Logo <a href="http://openclipart.org/detail/8598/lime-variations-by-gerald_g-8598">designed by Gerald G.</a>. We &hearts; contributions! Want to improve this website? Fork it <a href="https://github.com/limetext/limetext.github.io">from here</a>.
+    </footer>
+    {% endif %}
 
-<!-- global scripts here -->
-<script type="text/javascript">
-</script>
-
-<!-- github ribbon -->
-<a class="hide" href="https://github.com/limetext/lime"><img style="position: fixed; top: 0; right: 0; border: 0; z-index:100" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
-
-</body>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <a class="forkme" href="https://github.com/limetext/lime" style="display: none"><img src="https://github-camo.global.ssl.fastly.net/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+  </body>
 </html>

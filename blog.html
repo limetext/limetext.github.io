@@ -1,0 +1,17 @@
+---
+layout: default
+title: Lime's latest news
+---
+
+<section class="container">
+  <h1>Our latest stories...</h1>
+  {% for post in site.posts %}
+    <article>
+      <h2>
+        <a class="no-underline" href="{{ post.url }}">{{ post.title }} <small>&mdash;
+        {{ post.date | date_to_string }}</small></a>
+      </h2>
+      {{ post.content }}
+    </article>
+  {% endfor %}
+</section>
