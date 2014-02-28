@@ -1,0 +1,121 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif;
+  line-height: 1.7em;
+}
+
+span.monospace {
+  font-family: "Consolas", "Monaco", "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+.container {
+  max-width: 970px !important;
+}
+
+a.forkme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  z-index: 1001;
+}
+@media (min-width: 768px) {
+  a.forkme {
+    display: inline !important;
+  }
+}
+
+a.headline {
+  font-size: 28px;
+}
+@media (min-width: 500px) {
+  a.headline {
+    font-size: 63px;
+  }
+}
+
+a.headline, .no-underline {
+  text-decoration: none;
+}
+
+a.headline img {
+  display: inline-block;
+  width: 100px;
+  padding: 0;
+}
+
+ul.committer {
+  margin-bottom: 12px;
+}
+ul.committer li {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+div.navbar {
+  margin-bottom: 0;
+}
+
+div.tales {
+  padding-left: 35px;
+}
+@media (min-width: 768px) {
+  div.tales {
+    padding-left: 15px;
+  }
+}
+
+header.jumbotron .btn-default {
+  color: rgb(153, 153, 153);
+}
+
+h1 {}
+
+h2 {
+  font-size: 21px;
+  margin: 21px 0;
+}
+
+.yellow {
+  color: rgb(211, 164, 89);
+}
+
+ul {
+  padding-left: 16px;
+}
+ul.unstyled {
+  padding-left: 0px;
+  list-style: none outside none;
+}
+
+p {
+  margin: 1em 0px;
+}
+
+img.rounded {
+  width: 40px;
+  border-radius: 20px;
+}
+
+div.banner {
+  display: none;
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+  padding: 2em;
+  color: rgb(153, 153, 153);
+}
+@media (min-width: 768px) {
+  div.banner {
+    display: block;
+  }
+}
+div.banner .btn-warning {
+  margin-top: 30px;
+}
+
+footer {
+  background: none repeat scroll 0% 0% rgb(17, 17, 17);
+  color: rgb(102, 102, 102);
+  text-align: center;
+  padding: 1em;
+  font-size: 80%;
+}

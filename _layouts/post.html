@@ -1,16 +1,14 @@
 ---
 layout: default
+ispost: true
 ---
 
-<div class="pure-g-r content-ribbon">
-	<div class="pure-u-1">
-		<div class="l-box">
-			<h2 class="content-subhead">{{ page.title }}</h2>
-			<p class="meta">{{ page.date | date_to_string }}</p>
+<section class="container">
+  <h1>
+    {{ page.title }} <small>&mdash; {{ page.date | date_to_string }}</small>
+  </h1>
 
-			<div class="post">
-				{{ content }}
-			</div>
-		</div>
-	</div>
-</div>
+  <article>
+    {{ content }}
+  </article>
+</section>

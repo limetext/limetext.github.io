@@ -1,4 +1,12 @@
-name: Lime - open source text editor
+name: Lime – An Open Source Text Editor
 markdown: redcarpet
 pygments: true
 exclude: ['Rakefile']
+
+nav:
+  - text: Blog
+    url: /blog.html
+  - text: Contributing
+    url: /contribute.html
+  - text: Wiki
+    url: https://github.com/limetext/lime/wiki
