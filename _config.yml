@@ -1,7 +1,7 @@
 name: Lime – An Open Source Text Editor
 markdown: redcarpet
 pygments: true
-exclude: ['Rakefile']
+exclude: ['Rakefile', 'Gemfile', 'Gemfile.lock']
 
 nav:
   - text: Blog
