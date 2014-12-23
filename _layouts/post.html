@@ -3,12 +3,33 @@ layout: default
 ispost: true
 ---
 
-<section class="container">
-  <h1>
-    {{ page.title }} <small>&mdash; {{ page.date | date_to_string }}</small>
-  </h1>
+<div class="container">
+	<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1>
+        {{ page.title }}
+        <small>&mdash; {{ page.date | date_to_string }}</small>
+      </h1>
+      
+      <article>
+        {{ content }}
+      </article>
+      
+      <div class="paginator clearfix">
+        {% if page.previous.url %} 
+          <a class="btn btn-default pull-left" href="{{ page.previous.url }}">
+            <i class="fa fa-chevron-left"></i>
+            {{ page.previous.title }}
+          </a> 
+        {% endif %} 
 
-  <article>
-    {{ content }}
-  </article>
-</section>
+        {% if page.next.url %} 
+          <a class="btn btn-default pull-right" href="{{ page.next.url }}">
+            {{ page.next.title }}
+            <i class="fa fa-chevron-right"></i>
+          </a> 
+        {% endif %} 
+      </div>
+    </div>
+  </div>
+</div>

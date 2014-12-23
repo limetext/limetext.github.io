@@ -1,121 +1,92 @@
 body {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif;
-  line-height: 1.7em;
+  font-family:"Noto Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif;
+  font-size:16px; min-width:320px; overflow-y:scroll; line-height:1.7
+}
+a {color:#499232}
+a:hover {color:#72B65D}
+p {margin-bottom:15px}
+
+.navbar {margin-bottom:0}
+.navbar > .container {max-width:975px}
+.navbar-nav > li > a {font-size:14px}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {color:#eee}
+.navbar-brand {position:relative; padding-left:40px}
+.navbar-brand > img {position:absolute; height:20px; width:auto; top:15px; left:15px}
+
+.btn-lime {
+  background-color:#86A338;
+  border-color:#5E7227;
+  color:#fff;
+}
+.btn-lime:hover,
+.btn-lime:focus, .btn-lime.focus,
+.btn-lime:active, .btn-lime.active,
+.open > .dropdown-toggle.btn-lime {
+  background-color:#A2C644;
+  border-color:#718A2F;
+  color:#fff;
 }
 
-span.monospace {
-  font-family: "Consolas", "Monaco", "Andale Mono", "DejaVu Sans Mono", monospace;
-}
-
-.container {
-  max-width: 970px !important;
-}
-
-a.forkme {
+.forkme {
   position: absolute;
   top: 0;
   right: 0;
   border: 0;
   z-index: 1001;
 }
-@media (min-width: 768px) {
-  a.forkme {
-    display: inline !important;
-  }
+
+.text-yellow {color:#f39c12}
+
+#hero {
+  background-image:url('../img/hero.jpg');
+  background-position:center;
+  background-repeat:no-repeat;
+  background-color:#000;
+  padding:60px 15px 40px; color:#fff; font-size:20px;
+  text-shadow:3px 3px 0 #000
+}
+#hero > img {width:150px}
+#hero > h1 {letter-spacing:1px}
+
+#introduction {font-size:20px; padding:50px 0}
+#introduction-links {margin-bottom:15px}
+#introduction-links .btn {padding-left:0; padding-right:0; margin:5px 0}
+
+#blog-short {font-size:20px}
+#blog-short h2 {margin:0}
+#blog-short table {width:100%; margin:10px 0}
+#blog-short td {padding:5px 10px; vertical-align:top}
+.blog-short-date {min-width:80px}
+
+#rss-link, #rss-link:hover {color:#f39c12; text-decoration:none}
+#blog-posts {}
+#blog-posts > li:first-child {border-top:0}
+#blog-posts > li {padding:15px 0; border-top:1px solid #eee}
+#blog-posts > li > h3 {margin-top:15px}
+
+.paginator {margin:15px 0}
+.paginator > .btn {min-width:100px; margin:5px 0}
+
+footer {background-color:#222; color:#fff; border-top:1px solid #080808; padding:10px 15px}
+.extended-footer {background-color:#272822; color:#fff; padding:50px 0; margin-top:15px}
+
+.committer-list {margin-bottom:30px}
+.committer-list > li > a {display:block; margin:5px 0}
+.committer-list > li > a > img {width:40px; height:auto; border-radius:50%; background-clip:padding-box; box-shadow:0 2px 1px #000}
+
+/* responsive */
+@media (max-width:767px) { /* xs */
+  #introduction, #blog-short {font-size:16px}
 }
 
-a.headline {
-  font-size: 28px;
-}
-@media (min-width: 500px) {
-  a.headline {
-    font-size: 63px;
-  }
+@media (min-width:768px) and (max-width:991px) { /* sm */
+  
 }
 
-a.headline, .no-underline {
-  text-decoration: none;
+@media (min-width:992px) and (max-width:1199px) { /* md */
+  
 }
 
-a.headline img {
-  display: inline-block;
-  width: 100px;
-  padding: 0;
-}
+@media (min-width:1200px) { /* lg */
 
-ul.committer {
-  margin-bottom: 12px;
-}
-ul.committer li {
-  display: inline-block;
-  margin-right: 4px;
-}
-
-div.navbar {
-  margin-bottom: 0;
-}
-
-div.tales {
-  padding-left: 35px;
-}
-@media (min-width: 768px) {
-  div.tales {
-    padding-left: 15px;
-  }
-}
-
-header.jumbotron .btn-default {
-  color: rgb(153, 153, 153);
-}
-
-h1 {}
-
-h2 {
-  font-size: 21px;
-  margin: 21px 0;
-}
-
-.yellow {
-  color: rgb(211, 164, 89);
-}
-
-ul {
-  padding-left: 16px;
-}
-ul.unstyled {
-  padding-left: 0px;
-  list-style: none outside none;
-}
-
-p {
-  margin: 1em 0px;
-}
-
-img.rounded {
-  width: 40px;
-  border-radius: 20px;
-}
-
-div.banner {
-  display: none;
-  background-color: rgb(238, 238, 238);
-  text-align: center;
-  padding: 2em;
-  color: rgb(153, 153, 153);
-}
-@media (min-width: 768px) {
-  div.banner {
-    display: block;
-  }
-}
-div.banner .btn-warning {
-  margin-top: 30px;
-}
-
-footer {
-  background: none repeat scroll 0% 0% rgb(17, 17, 17);
-  color: rgb(102, 102, 102);
-  text-align: center;
-  padding: 1em;
-  font-size: 80%;
 }
