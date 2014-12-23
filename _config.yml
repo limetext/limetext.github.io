@@ -1,11 +1,14 @@
 name: Lime – An Open Source Text Editor
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 exclude: ['Rakefile', 'Gemfile', 'Gemfile.lock']
+
+paginate: 5
+paginate_path: blog/page:num
 
 nav:
   - text: Blog
-    url: /blog.html
+    url: /blog/
   - text: Contributing
     url: /contribute.html
   - text: Wiki

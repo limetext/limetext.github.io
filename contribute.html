@@ -3,77 +3,74 @@ layout: default
 title: Contribute to the Lime
 ---
 
-<section class="committer container">
-  <article>
-    <h1>Made with &hearts;, <a href="http://golang.org/">Go</a> and You!</h1>
-    <p>
-      We are all committed to making an easy-to-use, efficient and free text editor
-      for everyone.
-    </p>
-    <p>
-      The <a href="https://github.com/limetext/lime">Backend</a> itself is written in Go. If you
-      want to have a try at fixing some <a href="https://github.com/limetext/lime/issues">issues
-      we encounter</a>, go ahead and fork the project! If you need help at any point, just come
-      up on IRC to discuss with the others. Lime is still in an early stage but it is evolving along quickly.
-    </p>
-    <p>
-      The <a href="https://github.com/limetext/lime">Frontend</a> is written in
-      <span class="yellow">what ever GUI language suits you</span>! At the moment there are
-      termbox, Qt (QML) and HTML/JavaScript implementations. Dart and Skia are in discussion.<br>
-      If one of these languages appeals to you, feel free to push the task forward and contribute
-      to the codebase!
-    </p>
-    <p>
-      The <a href="https://github.com/limetext/limetext.github.io">Website</a> is statically
-      generated via <a href="http://jekyllrb.com/">Jekyll</a> on
-      <a href="http://pages.github.com/">GitHub Pages</a>. We use the 
-      <a href="http://getbootstrap.com/">Bootstrap Framework</a> and <a href="http://jquery.com/">jQuery</a>.
-      Fluent English writers are important to us as well, since Wikis and Documentation need to
-      be written. The story of the Lime has to be told :-)
-    </p>
-  </article>
+<div class="container">
+	<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1>Made with <span class="text-danger">&hearts;</span>, <a href="http://golang.org/">Go</a> and You!</h1>
+      <p>
+        We are all committed to making an easy-to-use, efficient and free text editor
+        for everyone.
+      </p>
+      <p>
+        The <a href="https://github.com/limetext/lime">Backend</a> itself is written in Go. If you
+        want to have a try at fixing some <a href="https://github.com/limetext/lime/issues">issues
+        we encounter</a>, go ahead and fork the project! If you need help at any point, just come
+        up on IRC to discuss with the others. Lime is still in an early stage but it is evolving along quickly.
+      </p>
+      <p>
+        The <a href="https://github.com/limetext/lime">Frontend</a> is written in
+        <span class="text-yellow">whatever GUI language suits you</span>! At the moment there are
+        termbox, Qt (QML) and HTML/JavaScript implementations. Dart and Skia are in discussion.
+        If one of these languages appeals to you, feel free to push the task forward and contribute
+        to the codebase!
+      </p>
+      <p>
+        The <a href="https://github.com/limetext/limetext.github.io">Website</a> is statically
+        generated via <a href="http://jekyllrb.com/">Jekyll</a> on
+        <a href="http://pages.github.com/">GitHub Pages</a>. We use the 
+        <a href="http://getbootstrap.com/">Bootstrap Framework</a> and <a href="http://jquery.com/">jQuery</a>.
+        Fluent English writers are important to us as well, since Wikis and Documentation need to
+        be written. The story of the Lime has to be told <i class="fa fa-smile-o"></i>
+      </p>
+      
+      <hr>
+      
+      <h1>Contributors</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="text-yellow"><i class="fa fa-tasks"></i> Lime Backend</h3>
+          <ul id="committer-backend" class="list-inline committer-list"></ul>
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-yellow"><i class="fa fa-desktop"></i> Lime Website</h3>
+          <ul id="committer-frontend" class="list-inline committer-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <article>
-    <h1>Contributors</h1>
-    <h2 class="yellow">&raquo; to the Lime Backend</h2>
-    <ul id="committer-backend" class="committer unstyled">
-    </ul>
-    <h2 class="yellow">&raquo; to the Lime Website</h2>
-    <ul id="committer-website" class="committer unstyled">
-    </ul>
-    <ul id="committer-frontend" class="committer unstyled">
-    </ul>
-    <p>
-      Keep being awesome!
-    </p>
-  </article>
-</section>
+{% include extended_footer.html %}
 
 <script>
-  function httpGet(theUrl)
-  {
-    var xmlHttp = null;
-
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false );
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-  }
-
-  function addToList(theList, theContributors) {
-    var list = document.getElementById(theList);
-
-    $.each(theContributors, function(key, value){
-      list.innerHTML = list.innerHTML + "<a class='floatme' href=" + value.html_url + "><li><img class='rounded' src=" + value.avatar_url +" ></img></li></a>";
+  function addToCommitterList (parent, list) {
+    $(parent).hide();
+    
+    $.each(list, function (index, item) {
+      $(parent).append(
+        '<li><a href="' + item.html_url + '" data-toggle="tooltip" title="' + item.login + '">' +
+          '<img src="' + item.avatar_url + '" alt="' + item.login + '"></a></li>'
+      );
     });
+    
+    $(parent).fadeIn().find('a').tooltip();
   }
-
-  var contributorsBackend = $.parseJSON(httpGet("https://api.github.com/repos/limetext/lime/contributors"));
-  var contributorsWebsite = $.parseJSON(httpGet("https://api.github.com/repos/limetext/limetext.github.io/contributors"))
-  //var contributorsFrontend* = $.parseJSON(httpGet("https://api.github.com/repos/limetext/:frontend/contributors"))
-
-
-  addToList("committer-backend", contributorsBackend);
-  addToList("committer-website", contributorsWebsite);
-  //addToList("committer-frontend", contributorsWebsite);
+  
+  $.getJSON('https://api.github.com/repos/limetext/lime/contributors', function (data) {
+    addToCommitterList($('#committer-backend'), data);
+  });
+  
+  $.getJSON('https://api.github.com/repos/limetext/limetext.github.io/contributors', function (data) {
+    addToCommitterList($('#committer-frontend'), data);
+  });
 </script>

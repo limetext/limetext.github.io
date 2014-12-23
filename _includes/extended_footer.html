@@ -1,0 +1,43 @@
+<div class="extended-footer">
+<div class="container">
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+  <div class="row">
+    <div class="col-sm-4">
+        <h3>Get Involved</h3>
+        <ul class="list-unstyled">
+            <li><a href="http://webchat.freenode.net/?channels=limetext">Chat on <samp>#limetext</samp></a></li>
+            <li><a href="https://github.com/limetext/lime/issues?direction=desc&state=open">Current Issues</a></li>
+         </ul>
+    </div>
+    <div class="col-sm-4">
+        <h3>Quick Links</h3>
+        <ul class="list-unstyled">
+            <li><a href="https://github.com/limetext/lime">Source Code</a></li>
+            <li><a href="https://github.com/limetext/lime/issues/new">File an issue</a></li>
+            <li><a href="https://github.com/limetext/lime/wiki">Wiki</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-4">
+        <h3>Tales from the Lime</h3>
+        <ul class="list-unstyled">
+        {% for post in site.posts limit:4 %}
+        <li>
+            {{ post.date | date: "%d %b" }}
+            <i class="fa fa-angle-double-right"></i>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <br>
+      <a href="https://github.com/limetext/lime" class="btn btn-warning"><i class="fa fa-github"></i> Get Lime on GitHub</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
