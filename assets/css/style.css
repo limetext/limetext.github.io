@@ -35,6 +35,14 @@ p {margin-bottom:15px}
   z-index: 1001;
 }
 
+.points:after{
+    content: ' ·';
+}
+
+.points:before{
+    content: '· ';
+}
+
 .text-yellow {color:#f39c12}
 
 #hero {
