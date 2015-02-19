@@ -78,6 +78,14 @@ footer {background-color:#222; color:#fff; border-top:1px solid #080808; padding
 .committer-list > li > a > img {width:40px; height:auto; border-radius:50%; background-clip:padding-box; box-shadow:0 2px 1px #000}
 
 /* responsive */
+
+@media all screen and(max-width: 1300px){
+    .img-responsive{
+        height: 600px;
+        width: 95%;
+    }
+}
+
 @media (max-width:767px) { /* xs */
   #introduction, #blog-short {font-size:16px}
 }
@@ -91,5 +99,12 @@ footer {background-color:#222; color:#fff; border-top:1px solid #080808; padding
 }
 
 @media (min-width:1200px) { /* lg */
+
+}
+
+@media all screen and(max-width: 490px){
+    .img-responsive{
+        height: auto;
+    }
 
 }
