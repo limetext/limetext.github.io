@@ -64,6 +64,9 @@ p {margin-bottom:15px}
 #blog-posts > li {padding:15px 0; border-top:1px solid #eee}
 #blog-posts > li > h3 {margin-top:15px}
 
+.img-responsive:hover{
+    box-shadow: 0 0 1em grey;
+}
 .paginator {margin:15px 0}
 .paginator > .btn {min-width:100px; margin:5px 0}
 
