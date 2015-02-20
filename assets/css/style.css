@@ -35,6 +35,14 @@ p {margin-bottom:15px}
   z-index: 1001;
 }
 
+.menu-fixed{
+    position:   fixed;
+    text-align: center;
+    top:        0;
+    width:      100%;
+    z-index    9999
+}
+
 .points:after{
     content: ' ·';
 }
