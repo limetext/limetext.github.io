@@ -6,7 +6,7 @@ category:   news
 ---
 
 Only because the software is for free, it does not mean you have to work for free.  
-Only becaue you can't code, it does not mean you can't contribute.
+Only because you can't code, it does not mean you can't contribute.
 
 From the depths of the World Wide Web - [Bountysource] comes to the rescue.
 

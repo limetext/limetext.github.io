@@ -5,7 +5,7 @@ date:       2013-11-27 21:23:01
 category:   news
 ---
 
-We want to bring you an Open Source text editor with great capatibilities, as a successor
+We want to bring you an Open Source text editor with great capabilities, as a successor
 to Sublime Text.
 
 We use Jekyll as a static site generator fully integrated into GitHub Pages. Feel free to
