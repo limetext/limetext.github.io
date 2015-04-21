@@ -1,12 +1,11 @@
 $(document).ready(function(){
+    var menu = $(".navbar-fixed");
 
-var menu = $(".navbar-fixed");
-
-$(window).on('scroll', function() {
-    if($(window).scrollTop() > menu_offset.top) {
-        menu.addClass('menu-fixed');
-    } else {
-        menu.removeClass('menu-fixed');
-    }
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > menu.scrollTop()) {
+            menu.addClass('menu-fixed');
+        } else {
+            menu.removeClass('menu-fixed');
+        }
+    });
 });
-})
