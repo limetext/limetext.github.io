@@ -1,0 +1,35 @@
+# site information
+title: Lime Text
+description: An Open Source Text Editor
+url: http://limetext.org
+
+# ruby gems
+gems:
+  - jekyll-feed
+
+# default layouts
+defaults:
+  - scope:
+      type: pages
+    values:
+      layout: page
+  - scope:
+      type: posts
+    values:
+      layout: post
+
+# markdown configuration
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+# sass configuration
+sass:
+  style: compressed
+
+# exclude files from compilation
+exclude: [
+  readme.md,
+  Gemfile,
+  Gemfile.lock
+]
