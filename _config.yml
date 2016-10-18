@@ -6,6 +6,7 @@ url: http://limetext.org
 # ruby gems
 gems:
   - jekyll-feed
+  - jemoji
 
 # default layouts
 defaults:

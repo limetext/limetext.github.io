@@ -1,4 +1,4 @@
-<nav class="nav nav-inline" role="navigation">
+<nav class="nav nav-inline nav-fixed" role="navigation">
 	{% assign pages = site.pages | sort:"url" %}
 	{% for p in pages %}
 		{% if p.in-nav == true %}

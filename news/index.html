@@ -5,8 +5,14 @@ in-nav: true
 
 {% for post in site.posts %}
 	{% if post.hidden != true %}
-		<p>
-			<a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: '%Y %b %d' }})
-		</p>
+		<div>
+			<h4>
+				{{ post.date | date: '%Y %b %d' }} —
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</h4>
+
+			<p>{{ post.content | strip_html | lstrip | truncatewords: 50 }}</p>
+		</div>
+		<hr>
 	{% endif %}
 {% endfor %}
