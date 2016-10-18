@@ -1,0 +1,8 @@
+<nav>
+	{% assign pages = site.pages | sort:"url" %}
+	{% for p in pages %}
+		{% if p.in-nav == true %}
+			<a href="{{ p.url }}">{{ p.title }}</a>
+		{% endif %}
+	{% endfor %}
+</nav>

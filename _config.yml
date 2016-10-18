@@ -25,6 +25,7 @@ kramdown:
 
 # sass configuration
 sass:
+  sass_dir: assets/sass
   style: compressed
 
 # exclude files from compilation
