@@ -1,4 +1,28 @@
 ---
 ---
 
+// core variables and mixins
+@import 'variables';
+@import 'mixins';
+
+// reboot
 @import 'vendor/normalize';
+
+// content
+@import 'font';
+@import 'typography';
+@import 'grid';
+@import 'buttons';
+@import 'forms';
+@import 'tables';
+
+// components
+@import 'navs';
+@import 'cards';
+
+// utilities
+@import 'utilities';
+@import 'vendor/print';
+
+// syntax highlighting
+@import 'vendor/syntax'

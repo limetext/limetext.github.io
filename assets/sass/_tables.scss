@@ -1,0 +1,67 @@
+// Tables
+// --------------------------------------------------
+
+table {
+	max-width: 100%;
+	background-color: $background-color;
+
+	> thead > tr > th {
+		text-align: left;
+	}
+}
+
+.table {
+	width: 100%;
+	margin-bottom: $margin-large;
+
+	> thead > tr > th,
+	> tbody > tr > td {
+		padding: $padding-small $padding-medium;
+		vertical-align: middle;
+	}
+
+	@at-root #{&}-lined {
+		> thead > tr > th,
+		> tbody > tr > td {
+			border-bottom: $border;
+		}
+
+		> thead > tr > th {
+			border-top: $border;
+		}
+	}
+
+	@at-root #{&}-bordered {
+		border: $border;
+
+		> thead > tr > th,
+		> tbody > tr > td {
+			border: $border;
+		}
+	}
+
+	@at-root #{&}-striped > tbody > tr:nth-child(odd) {
+		background-color: $grey-lightest;
+	}
+}
+
+@media (max-width: $screen-x-small-max) {
+	.table-responsive {
+		width: 100%;
+		margin-bottom: $margin-large;
+		border: $border;
+		overflow-y: hidden;
+		overflow-x: auto;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		-webkit-overflow-scrolling: touch;
+
+		> .table {
+			margin-bottom: 0;
+
+			> thead > tr > th,
+			> tbody > tr > td {
+				white-space: nowrap;
+			}
+		}
+	}
+}

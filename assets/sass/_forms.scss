@@ -1,0 +1,177 @@
+// Forms
+// --------------------------------------------------
+
+fieldset {
+	padding: 0;
+	margin: 0 0 $margin-large;
+	border: 0;
+	min-width: 0;
+}
+
+legend {
+	display: block;
+	margin-bottom: $margin-medium;
+	font-size: $font-size-large;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+	margin: 4px 0 0;
+	margin-top: 1px \9; /* IE8-9 */
+	line-height: normal;
+}
+
+input[type='file'] {
+	display: block;
+}
+
+select[multiple],
+select[size] {
+	height: auto;
+}
+
+// Focus for file, radio, and checkbox
+input[type='file']:focus,
+input[type='radio']:focus,
+input[type='checkbox']:focus {
+	@include tab-focus();
+}
+
+.field {
+	display: block;
+	margin-bottom: $margin-medium;
+}
+
+.label {
+	display: inline-block;
+	margin-bottom: $margin-small;
+}
+
+
+// Inputs
+// -------------------------
+
+.input {
+	display: block;
+	width: 100%;
+	height: $height-medium;
+	padding: 0;
+
+	font-size: $font-size;
+	line-height: ($height-medium - $border-width * 2);
+	color: $black;
+
+	background-color: $background-color;
+	background-image: none;
+	border-width: $border-width;
+	border-style: $border-style;
+	border-color: transparent;
+	border-bottom-color: $border-color;
+
+	&:hover,
+	&:focus {
+		border-bottom-color: $black;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&[type='file'] {
+		padding: 0;
+		height: auto;
+
+		line-height: normal;
+
+		border-width: 0;
+	}
+
+	&[disabled],
+	&[readonly] {
+		border-bottom-color: $border-color;
+
+		cursor: not-allowed;
+
+		@include opacity(.5);
+	}
+
+	@at-root fieldset[disabled] & {
+		border-bottom-color: $border-color;
+
+		cursor: not-allowed;
+
+		@include opacity(.5);
+	}
+}
+
+textarea {
+	resize: vertical;
+
+	&.input {
+		height: auto;
+	}
+}
+
+.input-red {
+	@include input-color($red);
+}
+
+.input-green {
+	@include input-color($green);
+}
+
+.input-blue {
+	@include input-color($blue);
+}
+
+
+// Radios & Checkboxes
+// -------------------------
+
+.radio,
+.checkbox {
+	position: relative;
+	display: block;
+	min-height: $height-medium;
+	padding: .1875em 0 .1875em 1.5em;
+	cursor: pointer;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: transparent;
+
+	&:before {
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		display: block;
+		height: 1px;
+		width: .875em;
+		content: ' ';
+	}
+
+	&:hover {
+		border-bottom-color: $border-color;
+
+		&:before {
+			background-color: $black;
+		}
+	}
+}
+
+.radio input[type='radio'],
+.checkbox input[type='checkbox'] {
+	position: absolute;
+	top: .5em;
+	left: 0;
+	width: .875em;
+	height: .875em;
+	margin-top: 0;
+}
+
+.radio-inline,
+.checkbox-inline {
+	display: inline-block;
+	margin-right: $padding-large;
+
+	vertical-align: middle;
+}

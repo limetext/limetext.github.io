@@ -1,0 +1,139 @@
+// Variables
+// --------------------------------------------------
+
+
+// Commmon
+// -------------------------
+
+$size-base: 9px !default;
+
+
+// Positioning
+// -------------------------
+
+// Z-indexes
+
+// $zindex-header: 1000 !default;
+
+
+
+// Box-model
+// -------------------------
+
+
+// Sizes
+$height-base: $size-base * 4 !default;
+$height-small: $height-base * 0.75 !default;
+$height-medium: $height-base !default;
+$height-large: $height-base * 1.25 !default;
+$height: $height-base !default;
+
+
+// Margins
+
+$margin-base: $size-base * 2 !default;
+$margin-small: $margin-base * 0.5 !default;
+$margin-medium: $margin-base !default;
+$margin-large: $margin-base * 1.5 !default;
+$margin: $margin-base !default;
+
+
+// Paddings
+
+$padding-base: $size-base * 2 !default;
+$padding-small: $padding-base * 0.5 !default;
+$padding-medium: $padding-base !default;
+$padding-large: $padding-base * 1.5 !default;
+$padding: $padding-base !default;
+
+
+
+// Typography
+// -------------------------
+
+
+// Fonts
+$font-size-base: $size-base * 2 !default;
+$font-size-small: $font-size-base * 0.875 !default;
+$font-size-medium: $font-size-base !default;
+$font-size-large: $font-size-base * 1.125 !default;
+
+$line-height-base: 1.5 !default;
+$line-height-small: $font-size-base * 1.5 !default;
+$line-height-medium: $font-size-base * 2 !default;
+$line-height-large: $font-size-base * 2.5 !default;
+
+$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
+$font-family-monospace: Menlo, Monaco, Consolas, 'Courier New', monospace !default;
+
+$font-size: $font-size-base !default;
+$line-height: $line-height-base !default;
+$font-family: $font-family-sans-serif !default;
+
+$font-size-h1: $font-size-base * 2.25 !default;
+$font-size-h2: $font-size-base * 2 !default;
+$font-size-h3: $font-size-base * 1.75 !default;
+$font-size-h4: $font-size-base * 1.5 !default;
+$font-size-h5: $font-size-base * 1.25 !default;
+$font-size-h6: $font-size-base !default;
+
+
+// Colors
+// http://github.com/mrmrs/colors
+
+$black: #111 !default;
+$white: #fff !default;
+$red: #ff4136 !default;
+$green: #2ecc40 !default;
+$blue: #0074d9 !default;
+$grey: #aaa !default;
+$grey-dark: #333 !default;
+$grey-light: #ddd !default;
+$grey-lighter: #eee !default;
+$grey-lightest: #fcfcfc !default;
+
+$color: $black !default;
+
+
+
+// Visual
+// -------------------------
+
+
+// Background
+
+$background-color: $white !default;
+
+
+// Borders
+
+$border-width: 1px !default;
+$border-style: solid !default;
+$border-color: $grey-lighter !default;
+$border-radius: 2px !default;
+$border: $border-width $border-style $border-color !default;
+
+
+
+// Misc
+// -------------------------
+
+
+// Media queries breakpoints
+// -------------------------
+
+// Large screen / wide desktop
+$screen-large-min: 1200px !default;
+
+// Medium screen / desktop
+$screen-medium-min: 992px !default;
+$screen-medium-max: ($screen-large-min - 1) !default;
+
+// Small screen / tablet
+$screen-small-min: 768px !default;
+$screen-small-max: ($screen-medium-min - 1) !default;
+
+// Extra small screen / phone
+$screen-x-small-max: ($screen-small-min - 1) !default;
+

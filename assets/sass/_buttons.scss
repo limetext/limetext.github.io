@@ -1,0 +1,64 @@
+// Buttons
+// --------------------------------------------------
+
+.button {
+	display: inline-block;
+	height: $height-medium;
+	padding: 0 $padding;
+
+	font-size: $font-size;
+	line-height: ($height-medium - $border-width * 2);
+
+	text-align: center;
+	vertical-align: middle;
+
+	background-color: $background-color;
+	border: $border;
+	border-radius: $border-radius;
+
+	cursor: pointer;
+	white-space: nowrap;
+	user-select: none;
+
+	&:focus,
+	&:active {
+		@include tab-focus();
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		border-color: $black;
+	}
+
+	&:active {
+		background-image: none;
+		box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	}
+
+	&.disabled,
+	&[disabled] {
+		color: $color;
+		background-color: $background-color;
+		border: $border;
+
+		cursor: not-allowed;
+		@include opacity(.5);
+	}
+
+	@at-root a#{&}.disabled {
+		pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+	}
+}
+
+.button-red {
+	@include button-color($red);
+}
+
+.button-green {
+	@include button-color($green);
+}
+
+.button-blue {
+	@include button-color($blue);
+}
