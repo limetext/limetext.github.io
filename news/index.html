@@ -1,0 +1,12 @@
+---
+title: News
+in-nav: true
+---
+
+{% for post in site.posts %}
+	{% if post.hidden != true %}
+		<p>
+			<a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: '%Y %b %d' }})
+		</p>
+	{% endif %}
+{% endfor %}

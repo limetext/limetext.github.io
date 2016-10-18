@@ -1,8 +1,6 @@
 ---
-layout:     post
-title:      We now have a Website!
-date:       2013-11-27 21:23:01
-category:   news
+title: We now have a Website!
+date: 2013-11-27 21:23:01
 ---
 
 We want to bring you an Open Source text editor with great capabilities, as a successor

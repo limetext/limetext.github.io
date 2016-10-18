@@ -1,8 +1,6 @@
 ---
-layout:   post
-title:    Website Redesign!
-date:     2014-02-28 15:57:01
-category: news
+title: Website Redesign!
+date: 2014-02-28 15:57:01
 ---
 
 Since Lime Text is gradually converging towards more stable releases (binaries?),

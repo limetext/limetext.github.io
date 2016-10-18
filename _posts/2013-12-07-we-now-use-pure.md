@@ -1,8 +1,6 @@
 ---
-layout:   post
-title:    We now use Pure!
-date:     2013-12-07 21:23:01
-category: news
+title: We now use Pure!
+date: 2013-12-07 21:23:01
 ---
 
 [Pure] is a small set of responsive CSS modules.  

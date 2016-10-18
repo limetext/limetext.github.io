@@ -1,8 +1,6 @@
 ---
-layout:   post
-title:    We now have an IRC channel
-date:     2013-12-24 15:57:01
-category: news
+title: We now have an IRC channel
+date: 2013-12-24 15:57:01
 ---
 
 We believe that being able to discuss with each other in something important

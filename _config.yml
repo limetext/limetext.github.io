@@ -18,6 +18,9 @@ defaults:
     values:
       layout: post
 
+# blog post location
+permalink: /news/:title/
+
 # markdown configuration
 markdown: kramdown
 kramdown:

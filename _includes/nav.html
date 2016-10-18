@@ -1,8 +1,8 @@
-<nav>
+<nav class="nav nav-inline" role="navigation">
 	{% assign pages = site.pages | sort:"url" %}
 	{% for p in pages %}
 		{% if p.in-nav == true %}
-			<a href="{{ p.url }}">{{ p.title }}</a>
+			<a class="nav-link {% if p.url == page.url or (p.url == '/blog/' and page.layout == 'post') %}active{% endif %}" href="{{ p.url }}">{{ p.title }}</a>
 		{% endif %}
 	{% endfor %}
 </nav>
