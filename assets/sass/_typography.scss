@@ -1,0 +1,178 @@
+// Typography
+// --------------------------------------------------
+
+html {
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: inherit;
+
+	&:before,
+	&:after {
+		box-sizing: inherit;
+	}
+}
+
+body {
+	font-size: $font-size;
+	font-family: $font-family;
+	line-height: $line-height;
+
+	background-color: $background-color;
+	color: $color;
+}
+
+a {
+	color: $green;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: darken($green, 10%);
+		text-decoration: underline;
+	}
+}
+
+hr {
+	margin-top: $margin;
+	margin-bottom: $margin;
+	border-width: 0;
+	border-top: $border;
+
+	&.dotted {
+		border-style: dotted;
+	}
+
+	&.dashed {
+		border-style: dashed;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: $margin;
+	font-weight: normal;
+	line-height: 1;
+}
+
+h1 {
+	font-size: $font-size-h1;
+}
+
+h2 {
+	font-size: $font-size-h2;
+}
+
+h3 {
+	font-size: $font-size-h3;
+}
+
+h4 {
+	font-size: $font-size-h4;
+}
+
+h5 {
+	font-size: $font-size-h5;
+}
+
+h6 {
+	font-size: $font-size-h6;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: $margin;
+}
+
+small {
+	font-size: 85%;
+	font-weight: normal;
+}
+
+ul,
+ol {
+	margin-top: 0;
+	margin-bottom: $margin;
+
+	&.unstyled {
+		padding-left: 0;
+
+		list-style: none;
+	}
+
+	&.inline {
+		padding-left: 0;
+
+		list-style: none;
+
+		> li {
+			display: inline-block;
+
+			+ li {
+				margin-left: $margin;
+			}
+		}
+	}
+
+	ul,
+	ol {
+		margin-bottom: 0;
+	}
+}
+
+dl {
+	margin-top: 0;
+	margin-bottom: $margin;
+}
+
+dt {
+	font-size: $font-size-large;
+}
+
+dd {
+	margin-left: 0;
+}
+
+blockquote {
+	margin: 0 0 $margin;
+	padding-left: $padding;
+	padding-right: $padding;
+
+	color: lighten($black, 30%);
+
+	border-left: $border;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: $font-family-monospace;
+}
+
+code,
+kbd {
+	padding: .2em .4em;
+
+	font-size: 90%;
+	white-space: nowrap;
+}
+
+pre {
+	display: block;
+	margin: 0 0 $margin;
+	padding: $padding;
+
+	font-size: 90%;
+	word-break: break-all;
+	word-wrap: break-word;
+
+	background-color: $grey-lightest;
+	border-left: $border;
+}

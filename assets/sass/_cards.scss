@@ -1,0 +1,21 @@
+// Cards
+// --------------------------------------------------
+
+.card {
+	position: relative;
+	display: block;
+	margin-bottom: $margin;
+	padding: $padding;
+
+	background-color: #fff;
+
+	@extend .clearfix;
+}
+
+.card-bordered {
+	border: $border;
+}
+
+.card-link + .card-link {
+	margin-left: $margin;
+}

@@ -1,0 +1,189 @@
+// Mixins
+// --------------------------------------------------
+
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//  contenteditable attribute is included anywhere else in the document.
+//  Otherwise it causes space to appear at the top and bottom of elements
+//  that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//  `:before` to contain the top-margins of child elements.
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: ' '; // 1
+		display: table; // 2
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+
+// WebKit-style focus
+
+@mixin tab-focus() {
+	// Default
+	outline: thin dotted;
+	// WebKit
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow() {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	overflow: hidden;
+}
+
+@mixin text-hide() {
+	font-size: 0;
+	line-height: 0;
+	color: transparent;
+	text-shadow: none;
+
+	background-color: transparent;
+	border: 0;
+}
+
+
+// Opacity
+@mixin opacity($opacity) {
+	opacity: $opacity;
+
+	// IE8 filter
+	$opacity-ie: ($opacity * 100);
+	filter: 'alpha(opacity=#{$opacity-ie})';
+}
+
+
+// Grid system
+// -------------------------
+
+@mixin cell-variant ($columns: 12) {
+	$i: $columns;
+
+	@while $i >= 0 {
+		.cell-#{$i} {
+			width: percentage($i / $columns);
+		}
+
+		$i: $i - 1;
+	}
+}
+
+@mixin offset-variant ($columns: 12) {
+	$i: $columns;
+
+	@while $i >= 0 {
+		.offset-#{$i} {
+			margin-left: percentage($i / $columns);
+		}
+
+		$i: $i - 1;
+	}
+}
+
+@mixin push-variant ($columns: 12) {
+	$i: $columns;
+
+	@while $i >= 0 {
+		.push-#{$i} {
+			left: percentage($i / $columns);
+		}
+
+		$i: $i - 1;
+	}
+}
+
+@mixin pull-variant ($columns: 12) {
+	$i: $columns;
+
+	@while $i >= 0 {
+		.pull-#{$i} {
+			right: percentage($i / $columns);
+		}
+
+		$i: $i - 1;
+	}
+}
+
+@mixin grid-responsive ($device, $screen) {
+	@media (max-width: $screen) {
+		.cell-#{$device} {
+			width: auto;
+			float: none;
+		}
+
+		.offset-#{$device} {
+			margin-left: 0;
+		}
+
+		.push-#{$device} {
+			left: auto;
+		}
+
+		.pull-#{$device} {
+			right: auto;
+		}
+	}
+}
+
+// Forms
+// -------------------------
+
+@mixin input-color($color) {
+	color: $color;
+
+	&:hover,
+	&:focus {
+		border-bottom-color: $color;
+	}
+}
+
+
+// Buttons
+// -------------------------
+
+@mixin button-color($color) {
+	color: $color;
+
+	&:hover,
+	&:focus {
+		border-color: $color;
+	}
+
+	&.disabled,
+	&[disabled] {
+		&:hover,
+		&:focus {
+			border-color: $border-color;
+		}
+	}
+}
+
+
+// Utilities
+// -------------------------
+
+@mixin float($value) {
+	float: $value !important;
+}
+
+@mixin float-responsive ($device, $screen) {
+	@media (max-width: $screen) {
+		.float-#{$device} {
+			@include float(none);
+		}
+	}
+}

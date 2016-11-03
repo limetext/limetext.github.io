@@ -1,8 +1,6 @@
 ---
-layout:     post
-title:      Bountysource
-date:       2014-07-22 02:46:07
-category:   news
+title: Bountysource
+date: 2014-07-22 02:46:07
 ---
 
 Only because the software is for free, it does not mean you have to work for free.  

@@ -1,0 +1,61 @@
+// Navigations
+// --------------------------------------------------
+
+.nav {
+	@extend .clearfix;
+}
+
+.nav-link {
+	display: block;
+	padding: ($padding-small / 2) $padding-medium;
+
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&.active {
+		color: $black;
+	}
+
+	&.disabled {
+		cursor: not-allowed;
+		@include opacity(.5);
+	}
+
+	@at-root .nav-inline & {
+		display: inline-block;
+		padding-left: $padding-small;
+		padding-right: $padding-small;
+		vertical-align: middle;
+	}
+
+	@at-root .nav-lined & {
+		border-left: $border-width $border-style transparent;
+
+		&.active,
+		&:hover {
+			border-left-color: $black;
+		}
+
+		&.disabled {
+			border-left-color: $border-color;
+		}
+	}
+
+	@at-root .nav-lined.nav-inline & {
+		border-left-width: 0;
+		border-bottom: $border-width $border-style transparent;
+
+		&.active,
+		&:hover {
+			border-bottom-color: $black;
+		}
+
+		&.disabled {
+			border-bottom-color: $border-color;
+		}
+	}
+}

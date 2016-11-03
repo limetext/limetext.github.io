@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"{% if page.class %} class="{{ page.class }}"{% endif %}>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>{{ site.title }} | {{ page.title }}</title>
+		<meta name="theme-color" content="#fff">
+		<link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+		<link rel="stylesheet" href="/assets/css/main.css">
+	</head>
+	<body>
+	<header id="header">
+		<div class="container">
+			<div class="grid">
+				<div class="cell">
+					<a class="nav-link" href="/">
+						{{ site.title }}
+					</a>
+				</div>
+				<div class="cell float-right">
+					{% include nav.html %}
+				</div>
+			</div>
+		</div>
+	</header>

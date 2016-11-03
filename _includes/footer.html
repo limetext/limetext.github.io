@@ -1,0 +1,45 @@
+		<footer class="container" id="footer" role="contentinfo">
+			<div class="grid">
+				<div class="cell-4">
+					<h5>Get Involved</h5>
+
+					<ul class="unstyled">
+						<li>
+							<a href="//gitter.im/orgs/limetext/rooms">Chat on Gitter</a>
+						</li>
+						<li>
+							<a href="//github.com/limetext/lime/issues">Current Issues</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="cell-4">
+					<h5>Quick Links</h5>
+
+					<ul class="unstyled">
+						<li>
+							<a href="//github.com/limetext">Source Code</a>
+						</li>
+						<li>
+							<a href="//github.com/limetext/lime/wiki">Wiki</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="cell-4">
+					<h5>Tales from the Lime</h5>
+
+					<ul class="unstyled">
+						{% for post in site.posts limit:3 %}
+							{% if post.hidden != true %}
+								<li>
+									{{ post.date | date: '%Y %b %d' }} <a href="{{ post.url }}">{{ post.title }}</a>
+								</li>
+							{% endif %}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
