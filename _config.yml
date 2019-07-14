@@ -1,7 +1,7 @@
 # site information
 title: Lime Text
 description: An Open Source Text Editor
-url: http://limetext.org
+url: https://limetext.github.io
 
 # ruby gems
 gems:
